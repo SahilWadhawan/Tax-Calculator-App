@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tax Calculator</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>Tax Calculator</h1>
+  <form id="taxForm">
+    <div class="form-group">
+      <label for="grossIncome">Gross Annual Income (in Lakhs):</label>
+      <input type="text" id="grossIncome" name="grossIncome" >
+      <div class="error-icon" id="grossIncomeError" title="This field is required">!</div>
+    </div>
+    <div class="form-group">
+      <label for="extraIncome">Extra Income (in Lakhs):</label>
+      <input type="text" id="extraIncome" name="extraIncome" >
+      <div class="error-icon" id="extraIncomeError" title="This field is required">!</div>
+    </div>
+    <div class="form-group">
+      <label for="deductions">Deductions (in Lakhs):</label>
+      <input type="text" id="deductions" name="deductions">
+      <div class="error-icon" id="deductionsError" title="This field is required">!</div>
+    </div>
+    <div class="form-group">
+      <label for="age">Age:</label>
+      <select id="age" name="age">
+        <option value="<40">&lt;40</option>
+        <option value="40-60">≥ 40 &lt; 60</option>
+        <option value=">=60">≥ 60</option>
+      </select>
+      <div class="error-icon" id="ageError">!</div>
+    </div>
+    <button type="button" id="calculateBtn">Calculate Tax</button>
+  </form>
+</div>
+
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Tax Calculation Result</h2>
+    <div id="taxResult"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
