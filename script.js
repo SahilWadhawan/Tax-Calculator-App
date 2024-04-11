@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function() {
       }
   
       const taxAmount = taxRate * taxableIncome;
-      const incomeAfterTaxDeductions = taxableIncome - taxAmount;
+      const incomeAfterTaxDeductions = (grossIncome + extraIncome - deductions) - taxAmount;
 
       const result = document.getElementById("taxResult");
       result.innerHTML = `
